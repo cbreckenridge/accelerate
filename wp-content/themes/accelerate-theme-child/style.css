@@ -176,10 +176,10 @@ div.case-study-imgs img{
 
 /*Contact form*/
 
-/*#content {
+#content.page {
   width: 615px;
   margin: 0 auto;
-}*/
+}
 
 #content h2 {
   margin-top: 60px;
@@ -212,12 +212,17 @@ input#nf-field-4.ninja-forms-field.nf-element{
   width: 205px;
   height: 55px;
   background-color: #45ac9d;
+  color: white;
+  font-weight: bold;
+  font-family: "open sans", Arial, sans-serif;
 }
 
 nf-field {
   float: left;
   font-size: 14px;
 }
+
+
 
 /*About Page*/
 div.about-hero {
@@ -247,7 +252,7 @@ div#content.about-page {
 
 div#services {
   width: 790px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 .about-page h5 {
@@ -267,23 +272,45 @@ p#our-services {
 
 #services img{
   display: inline-block;
-
 }
 
 div.service-text {
   width: 540px;
-  display: inline-block;
+  float: left;
 }
 
 div.contact-button {
   margin: 0 auto;
   border-top: 1px dotted #e3e1e1;
   width: 960px;
+  clear: both;
 }
 
 .contact-button a.button {
-  float: left;
+  float: right;
+  margin: 42px 155px 42px 36px;
 }
+
+.contact-button h2 {
+  width: 365px;
+  float: left;
+  margin-left: 140px;
+  margin-top: 55px;
+}
+
+.service:nth-child(odd) img {
+	float: left;
+	margin-right: 32px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.service:nth-child(even) img {
+	float: right;
+	margin-left: 32px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
 
 /*404 Page*/
 
