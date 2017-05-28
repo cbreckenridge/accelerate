@@ -16,20 +16,19 @@ get_header(); ?>
 				$size = "full";
 				$services = get_field('services');
 			?>
-			<aside class="case-study-info">
-				<h1><a href = "<?php the_permalink();?>"><?php the_title(); ?></a></h1>
-				<h3><?php echo $services?></h3>
+				<aside class="case-study-info">
+					<h1><a href = "<?php the_permalink();?>"><?php the_title(); ?></a></h1>
+					<h3><?php echo $services?></h3>
 
-				<p><?php the_excerpt(); ?></p>
-				<a href = "<?php the_permalink();?>">View Project ></a>
-			</aside>
+					<p><?php the_excerpt(); ?></p>
+					<a href = "<?php the_permalink();?>">View Project &rsaquo;</a>
+				</aside>
 
-			<div class="case-study-imgs">
-				<?php if($image_1) {?>
-					<a href = "<?php the_permalink();?>"><?php echo wp_get_attachment_image($image_1,$size)?></a>
-				<? }?>
-			</div>
-
+				<div class="case-study-imgs">
+					<?php if($image_1) {?>
+						<a href = "<?php the_permalink();?>"><?php echo wp_get_attachment_image($image_1,$size)?></a>
+					<? }?>
+				</div>
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->

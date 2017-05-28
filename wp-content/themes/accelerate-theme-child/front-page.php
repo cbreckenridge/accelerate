@@ -26,20 +26,20 @@ get_header(); ?>
 </section><!-- .home-page -->
 <section class="featured-work">
 	<div class="site-content">
-		<div class="blog-post">
-		 <h4>Featured Work</h4>
-			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
+	 <h4>Featured Work</h4>
+			<?php query_posts('posts_per_page=3&post_type=case_studies&order=asc'); ?>
 			 <?php while ( have_posts() ) : the_post();
 			 	$image = get_field("image_1");
 				$size = "medium";
 				?>
-				 <figure>
+				<div class="single-case-study">
+				 	<figure>
 					 <?php echo wp_get_attachment_image($image,$size);?>
-				 </figure>
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				 	</figure>
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				</div>
 			 <?php endwhile; ?>
 			<?php wp_reset_query(); ?>
-		 </div>
 	</div>
 </section>
 <section class="recent-posts">
@@ -56,4 +56,13 @@ get_header(); ?>
 	 </div>
 	</div>
 </section>
+<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+<div class="site-content">
+	<div id="secondary" class="widget-area" role="complementary">
+		<h4>Recent Tweet</h4>
+		<?php dynamic_sidebar( 'sidebar-2' ); ?>
+		<a class="twitter-link" href="https://twitter.com/christine_b26">Follow Us <span>&rsaquo;</span></a>
+	</div>
+</div>
+<?php endif; ?>
 <?php get_footer(); ?>
