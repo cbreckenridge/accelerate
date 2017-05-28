@@ -172,7 +172,9 @@ div.case-study-imgs img{
   margin-bottom: 85px;
 }
 
-
+#menu-social-media-nav li {
+  list-style: none;
+}
 
 /*Contact form*/
 
@@ -221,8 +223,6 @@ nf-field {
   float: left;
   font-size: 14px;
 }
-
-
 
 /*About Page*/
 div.about-hero {
@@ -277,6 +277,7 @@ p#our-services {
 div.service-text {
   width: 540px;
   float: left;
+  margin-bottom: 80px;
 }
 
 div.contact-button {
@@ -301,14 +302,14 @@ div.contact-button {
 .service:nth-child(odd) img {
 	float: left;
 	margin-right: 32px;
-  margin-top: 60px;
-  margin-bottom: 30px;
+  margin-top: 70px;
+  margin-bottom: 100px;
 }
 .service:nth-child(even) img {
 	float: right;
 	margin-left: 32px;
-  margin-top: 60px;
-  margin-bottom: 30px;
+  margin-top: 70px;
+  margin-bottom: 100px;
 }
 
 
